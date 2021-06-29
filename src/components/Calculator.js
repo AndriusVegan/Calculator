@@ -23,6 +23,7 @@ const Calculator = () => {
           <Button> 3 </Button>
           <Button> - </Button>
           <Button> . </Button>
+          <Button> 0 </Button>
           <Button> / </Button>
           <Button> x </Button>
           <ResetButton>
@@ -44,8 +45,8 @@ const Wrapper = styled.div`
   width: 540px;
   height: 708px;
   margin-top: 75px;
-  /* flex-direction: column;
-  align-items: center; */
+  border-radius: 8px;
+  box-sizing: border-box;
 `;
 
 const Settings = styled.div`
@@ -53,6 +54,8 @@ const Settings = styled.div`
   height: 44px;
   color: white;
   display: flex;
+  padding: 30px;
+  margin-bottom: 20px;
 
   h2 {
     font-family: Spartan;
@@ -77,7 +80,6 @@ const Input = styled.input`
   text-align: right;
   color: white;
   font-size: 50px;
-
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -101,7 +103,7 @@ const Buttons = styled.div`
   justify-items: center;
   /* grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr); */
-  grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
   grid-gap: 10px;
 
   p {
